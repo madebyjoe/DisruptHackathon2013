@@ -3,6 +3,7 @@
 
     <string name="app_name">Chevrolet Pass</string>
     <string name="action_settings">Settings</string>
+    <string name="insurance_claim">Insurance Claim</string>
     <string name="hello_world">Hello world!</string>
 
 </resources>

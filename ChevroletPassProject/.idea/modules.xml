@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ChevroletPass/ChevroletPass.iml" filepath="$PROJECT_DIR$/ChevroletPass/ChevroletPass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChevroletPassProject.iml" filepath="$PROJECT_DIR$/ChevroletPassProject.iml" />
+    </modules>
+  </component>
+</project>
+

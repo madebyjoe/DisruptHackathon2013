@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="effects_options">Effects</string>
+	<string name="handle">Handle</string>
+	<string name="normal">Normal</string>
+        <string name="text_effects">Text Effects</string>
+        <string name="filters_effects">Filter Effects</string>
+        <string name="borders_effects">Border Effects</string>
+        <string name="stickers_effects">Sticker Effects</string>
+        <string name="sticker_option">Sticker Option</string>
+        <string name="border_option">Border Option</string>
+        <string name="text_option">Text Option</string>
+        <string name="filter_option">Filter Option</string>
+        <string name="normal_crop">Normal Crop</string>
+        <string name="custom_crop">Custom Crop</string>
+        <string name="square_crop">Square Crop</string>
+        <string name="threextwo_crop">3x2 Crop</string>
+        <string name="threexfive_crop">3x5 Crop</string>
+	<string name="memeText">I don\'t always... but when I do...</string>
+	<string name="industrialText">YO BRO</string>
+	<string name="matrixText">Wake up Neo</string>
+	<string name="tipsText">tip#1337</string>
+	<string name="cuteText">What a cutie!</string>
+	<string name="handText">OMG! Not going to happen...</string>
+	<string name="thinText">Oh! Fancy!</string>
+	<string name="fonts">Fonts</string>
+	<string name="colors">Colors</string>
+	<string name="bubbles">Bubbles</string>
+	<string name="textTitle">Text</string>
+	<string name="meme">Meme</string>
+	<string name="industrial">Industrial</string>
+	<string name="matrix">Matrix</string>
+	<string name="bubble">Bubble</string>
+	<string name="cute">Cute</string>
+	<string name="hand">Hand</string>
+	<string name="thin">Thin</string>
+	<string name="classic">Classic</string>
+	<string name="funHouse">Fun House</string>
+	<string name="Amor">Amor</string>
+	<string name="Silver">Silver</string>
+	<string name="borders">Borders</string>
+	<string name="filters">Filters</string>
+	<string name="stickers">Stickers</string>
+	<string name="scenes">Scenes</string>
+	<string name="sdkVersion">1.0</string>
+	<string name="fileSaveProblem">Problems saving File</string>
+	<string name="cropImageTitle">Crop</string>
+	<string name="next">Next</string>
+	<string name="use">Use</string>
+	<string name="square">Square</string>
+	<string name="custom">Custom</string>
+	<string name="threeTwo">3:2</string>
+	<string name="fourThree">4:3</string>
+	<string name="fiveThree">5:3</string>
+	<string name="done">Done</string>
+	<string name="loading">Loading</string>
+	<string name="saving">Saving</string>
+	<string name="ok">OK</string>
+	<string name="image_problem_title">Image Saving Problem</string>
+	<string name="image_problem">Could not save image</string>
+	<string name="free">Free</string>
+	<string name="Back">Back</string>
+	<string name="restore_purchases">Restore Purchases</string>
+	<string name="install">Install</string>
+	<string name="download">Download</string>
+	<string name="installing">Installing</string>
+	<string name="purchase_problems">Problems purchasing</string>
+	<string name="couldnotbuy">Could not buy</string>
+	<string name="loading_effects">Loading Effects...</string>
+	<string name="loading_wait">Please wait</string>
+	<string name="no_network_title">Offline</string>
+	<string name="no_network_message">No network connections to download the effects. Please check your wifi/mobile connection.</string>
+	<string name="settings">Settings</string>
+	<string name="cancel">Cancel</string>
+	<string name="effects_store_error_html">
+	    <![CDATA[
+	    <html>
+    	<body style=\"text-align:center; font-size:18px; color:#6B6B6B; background:#000000\">
+    		<div style=\"margin-top:75px\">
+    			<img width=\"50%\" src=\"storeerror.png\"/>
+    			<p style=\"margin-top:25px; margin-left:40px; margin-right: 40px; line-height:32px\">SORRY, WE CAN\'T CONNECT TO THE STORE RIGHT NOW</p>
+    		</div>
+    	</body>
+	    </html>
+	    ]]>
+	</string>
+</resources>

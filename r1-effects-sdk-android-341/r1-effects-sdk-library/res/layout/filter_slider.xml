@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.radiumone.effects_sdk.ViaSlidingDrawer
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:handle="@+id/handle"
+		android:content="@+id/content"
+		android:id="@+id/drawer"
+		android:visibility="gone"
+		android:orientation="vertical"
+		android:background="@color/transparent"
+		>
+
+
+	<ImageView android:layout_width="wrap_content"
+			   android:layout_height="wrap_content"
+			   android:id="@id/handle"
+				android:src="@drawable/pulldown"
+			/>
+
+
+	<HorizontalScrollView
+			android:id="@id/content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/bg_filterbuttons"
+			android:fillViewport="true"
+			>
+	</HorizontalScrollView>
+</com.radiumone.effects_sdk.ViaSlidingDrawer>

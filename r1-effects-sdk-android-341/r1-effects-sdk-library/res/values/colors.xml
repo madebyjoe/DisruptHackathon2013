@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="white">#fff</color>
+	<color name="black">#000</color>
+	<color name="transparent">#00000000</color>
+	<color name="applyFilterTabStartGradientColor">#0578a5</color>
+	<color name="applyFilterTabEndGradientColor">#3394b7</color>
+	<color name="dragImageBorderColor">#f7d80a</color>
+	<color name="semiTransparentWhite">#40FFFFFF</color>
+	<color name="semiTransparentBlack">#80000000</color>
+	<color name="cropButtonTextColor">#868686</color>
+	<color name="cropButtonTextColorSelected">#cbcbcb</color>
+	<color name="stickerTitleColor">#e5e5e5</color>
+	<color name="stickerTextColor">#999999</color>
+	<color name="buttonBackgroundColor">#cecece</color>
+	<color name="red">#ff0000</color>
+</resources>

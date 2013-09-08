@@ -1,0 +1,220 @@
+
+Scanning .: ...................................................................................
+Scanning . (Phase 2): ..........................................................................
+src/com/radiumone/viame_android/activities/ApplyFilterActivity.java:232: Warning: The <activity> com.radiumone.viame_android.activities.ApplyFilterActivity is not registered in the manifest [Registered]
+ public ApplyFilterActivity() {
+        ~~~~~~~~~~~~~~~~~~~
+src/com/radiumone/viame_android/activities/CropImage.java:69: Warning: The <activity> com.radiumone.viame_android.activities.CropImage is not registered in the manifest [Registered]
+public class CropImage extends Activity {
+             ~~~~~~~~~
+src/com/radiumone/viame_android/activities/ApplyFilterActivity.java:1727: Warning: Do not hardcode "/sdcard/"; use Environment.getExternalStorageDirectory().getPath() instead [SdCardPath]
+      saveBitmap(new File("/sdcard/ViaMeFilters/assets/sampleout.jpg"));
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/com/radiumone/viame_android/activities/ApplyFilterActivity.java:316: Warning: Toast created but not shown: did you forget to call show() ? [ShowToast]
+      Toast.makeText(ApplyFilterActivity.this, getString(R.string.fileSaveProblem), Toast.LENGTH_LONG);
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/layout/photodetail.xml:272: Warning: Invalid layout param in a LinearLayout: layout_centerInParent [ObsoleteLayoutParam]
+      android:layout_centerInParent="true"
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/layout/photodetail.xml:287: Warning: Invalid layout param in a LinearLayout: layout_centerInParent [ObsoleteLayoutParam]
+      android:layout_centerInParent="true"
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/layout/photodetail.xml:242: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+  <LinearLayout
+  ^
+res/layout/cropimage.xml:7: Warning: Possible overdraw: Root element paints background @color/semiTransparentBlack with a theme that also paints a background (inferred theme is @android:style/Theme) [Overdraw]
+  android:background="@color/semiTransparentBlack"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/layout/filter_slider.xml:12: Warning: Possible overdraw: Root element paints background @color/applyFilterBackgroundColor with a theme that also paints a background (inferred theme is @android:style/Theme) [Overdraw]
+  android:background="@color/applyFilterBackgroundColor"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/layout/photodetail.xml:5: Warning: Possible overdraw: Root element paints background @color/applyFilterBackgroundColor with a theme that also paints a background (inferred theme is @android:style/Theme) [Overdraw]
+     android:background="@color/applyFilterBackgroundColor"
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/layout/text_edit_popup.xml:9: Warning: Possible overdraw: Root element paints background @color/transparent with a theme that also paints a background (inferred theme is @android:style/Theme) [Overdraw]
+     android:background="@color/transparent"
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/menu/applyfiltermenu.xml: Warning: The resource R.menu.applyfiltermenu appears to be unused [UnusedResources]
+res/drawable/bg_actionbar_bottom.xml: Warning: The resource R.drawable.bg_actionbar_bottom appears to be unused [UnusedResources]
+res/drawable/bg_apply_filter.xml: Warning: The resource R.drawable.bg_apply_filter appears to be unused [UnusedResources]
+res/drawable/bg_red_border.xml: Warning: The resource R.drawable.bg_red_border appears to be unused [UnusedResources]
+res/drawable/btn_2x3_normal_layer.xml: Warning: The resource R.drawable.btn_2x3_normal_layer appears to be unused [UnusedResources]
+res/drawable/btn_2x3_selected_layer.xml: Warning: The resource R.drawable.btn_2x3_selected_layer appears to be unused [UnusedResources]
+res/drawable/btn_3x5_checked_layer.xml: Warning: The resource R.drawable.btn_3x5_checked_layer appears to be unused [UnusedResources]
+res/drawable/btn_3x5_normal_layer.xml: Warning: The resource R.drawable.btn_3x5_normal_layer appears to be unused [UnusedResources]
+res/drawable/btn_3x5_selected_layer.xml: Warning: The resource R.drawable.btn_3x5_selected_layer appears to be unused [UnusedResources]
+res/drawable/btn_borders_normal.xml: Warning: The resource R.drawable.btn_borders_normal appears to be unused [UnusedResources]
+res/drawable/btn_borders_selected.xml: Warning: The resource R.drawable.btn_borders_selected appears to be unused [UnusedResources]
+res/drawable/btn_center_background.xml: Warning: The resource R.drawable.btn_center_background appears to be unused [UnusedResources]
+res/drawable/btn_crop.xml: Warning: The resource R.drawable.btn_crop appears to be unused [UnusedResources]
+res/drawable/btn_custom_normal_layer.xml: Warning: The resource R.drawable.btn_custom_normal_layer appears to be unused [UnusedResources]
+res/drawable/btn_custom_selected_layer.xml: Warning: The resource R.drawable.btn_custom_selected_layer appears to be unused [UnusedResources]
+res/drawable/btn_filter_normal.xml: Warning: The resource R.drawable.btn_filter_normal appears to be unused [UnusedResources]
+res/drawable/btn_filter_selected.xml: Warning: The resource R.drawable.btn_filter_selected appears to be unused [UnusedResources]
+res/drawable/btn_left_background.xml: Warning: The resource R.drawable.btn_left_background appears to be unused [UnusedResources]
+res/drawable/btn_original_normal_layer.xml: Warning: The resource R.drawable.btn_original_normal_layer appears to be unused [UnusedResources]
+res/drawable/btn_original_selected_layer.xml: Warning: The resource R.drawable.btn_original_selected_layer appears to be unused [UnusedResources]
+res/drawable/btn_right_background.xml: Warning: The resource R.drawable.btn_right_background appears to be unused [UnusedResources]
+res/drawable/btn_scenes.xml: Warning: The resource R.drawable.btn_scenes appears to be unused [UnusedResources]
+res/drawable/btn_square_normal_layer.xml: Warning: The resource R.drawable.btn_square_normal_layer appears to be unused [UnusedResources]
+res/drawable/btn_square_selected_layer.xml: Warning: The resource R.drawable.btn_square_selected_layer appears to be unused [UnusedResources]
+res/drawable/btn_stickers_normal.xml: Warning: The resource R.drawable.btn_stickers_normal appears to be unused [UnusedResources]
+res/drawable/btn_stickers_selected.xml: Warning: The resource R.drawable.btn_stickers_selected appears to be unused [UnusedResources]
+res/drawable/btn_text_normal.xml: Warning: The resource R.drawable.btn_text_normal appears to be unused [UnusedResources]
+res/drawable/btn_text_selected.xml: Warning: The resource R.drawable.btn_text_selected appears to be unused [UnusedResources]
+res/drawable/button_background.xml: Warning: The resource R.drawable.button_background appears to be unused [UnusedResources]
+res/values/colors.xml:9: Warning: The resource R.color.dragImageBorderColor appears to be unused [UnusedResources]
+ <color name="dragImageBorderColor">#f7d80a</color>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/values/colors.xml:10: Warning: The resource R.color.semiTransparentWhite appears to be unused [UnusedResources]
+ <color name="semiTransparentWhite">#40FFFFFF</color>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/values/colors.xml:13: Warning: The resource R.color.cropButtonTextColorSelected appears to be unused [UnusedResources]
+ <color name="cropButtonTextColorSelected">#cbcbcb</color>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/menu/cropmenu.xml: Warning: The resource R.menu.cropmenu appears to be unused [UnusedResources]
+res/anim/fadein.xml: Warning: The resource R.anim.fadein appears to be unused [UnusedResources]
+res/anim/fadeout.xml: Warning: The resource R.anim.fadeout appears to be unused [UnusedResources]
+res/drawable/filter_tab_normal.xml: Warning: The resource R.drawable.filter_tab_normal appears to be unused [UnusedResources]
+res/drawable/filter_tab_selected.xml: Warning: The resource R.drawable.filter_tab_selected appears to be unused [UnusedResources]
+res/drawable/progress.xml: Warning: The resource R.drawable.progress appears to be unused [UnusedResources]
+res/drawable/progress_indicator.xml: Warning: The resource R.drawable.progress_indicator appears to be unused [UnusedResources]
+res/anim/progress_rect.xml: Warning: The resource R.anim.progress_rect appears to be unused [UnusedResources]
+res/anim/push_right.xml: Warning: The resource R.anim.push_right appears to be unused [UnusedResources]
+res/anim/rotation.xml: Warning: The resource R.anim.rotation appears to be unused [UnusedResources]
+res/values/strings.xml:11: Warning: The resource R.string.fonts appears to be unused [UnusedResources]
+ <string name="fonts">Fonts</string>
+         ~~~~~~~~~~~~
+res/values/strings.xml:12: Warning: The resource R.string.colors appears to be unused [UnusedResources]
+ <string name="colors">Colors</string>
+         ~~~~~~~~~~~~~
+res/values/strings.xml:13: Warning: The resource R.string.bubbles appears to be unused [UnusedResources]
+ <string name="bubbles">Bubbles</string>
+         ~~~~~~~~~~~~~~
+res/values/strings.xml:29: Warning: The resource R.string.scenes appears to be unused [UnusedResources]
+ <string name="scenes">Scenes</string>
+         ~~~~~~~~~~~~~
+res/values/strings.xml:30: Warning: The resource R.string.effectsHost appears to be unused [UnusedResources]
+ <string name="effectsHost">https://sdk.via.me</string>
+         ~~~~~~~~~~~~~~~~~~
+res/values/strings.xml:32: Warning: The resource R.string.effectsFile appears to be unused [UnusedResources]
+ <string name="effectsFile">manifest.json</string>
+         ~~~~~~~~~~~~~~~~~~
+res/values/strings.xml:33: Warning: The resource R.string.sdkVersion appears to be unused [UnusedResources]
+ <string name="sdkVersion">1.0</string>
+         ~~~~~~~~~~~~~~~~~
+res/values/strings.xml:37: Warning: The resource R.string.use appears to be unused [UnusedResources]
+ <string name="use">Use</string>
+         ~~~~~~~~~~
+res/values/strings.xml:42: Warning: The resource R.string.fourThree appears to be unused [UnusedResources]
+ <string name="fourThree">4:3</string>
+         ~~~~~~~~~~~~~~~~
+res/values/strings.xml:53: Warning: The resource R.string.install appears to be unused [UnusedResources]
+ <string name="install">Install</string>
+         ~~~~~~~~~~~~~~
+res/values/strings.xml:4: Warning: Replace "..." with ellipsis character (É, &#8230;) ? [TypographyEllipsis]
+ <string name="memeText">I don\'t always... but when I do...</string>
+                         ^
+res/values/strings.xml:9: Warning: Replace "..." with ellipsis character (É, &#8230;) ? [TypographyEllipsis]
+ <string name="handText">OMG! Not going to happen...</string>
+                         ^
+res/drawable-mdpi/btn_3x2.png: Warning: The image btn_3x2.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/btn_3x2.png: 71x61 dp (142x122 px), drawable-hdpi/btn_3x2.png: 71x61 dp (107x92 px), drawable-mdpi/btn_3x2.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/btn_3x2_pressed.png: Warning: The image btn_3x2_pressed.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/btn_3x2_pressed.png: 71x61 dp (107x92 px), drawable-xhdpi/btn_3x2_pressed.png: 71x61 dp (142x122 px), drawable-mdpi/btn_3x2_pressed.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/btn_3x2_rotate_pressed.png: Warning: The image btn_3x2_rotate_pressed.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/btn_3x2_rotate_pressed.png: 71x61 dp (142x122 px), drawable-hdpi/btn_3x2_rotate_pressed.png: 71x61 dp (107x92 px), drawable-mdpi/btn_3x2_rotate_pressed.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/btn_3x5.png: Warning: The image btn_3x5.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/btn_3x5.png: 71x61 dp (142x122 px), drawable-hdpi/btn_3x5.png: 71x61 dp (107x92 px), drawable-mdpi/btn_3x5.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/btn_3x5_pressed.png: Warning: The image btn_3x5_pressed.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/btn_3x5_pressed.png: 71x61 dp (142x122 px), drawable-hdpi/btn_3x5_pressed.png: 71x61 dp (107x92 px), drawable-mdpi/btn_3x5_pressed.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/btn_3x5_rotate_pressed.png: Warning: The image btn_3x5_rotate_pressed.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/btn_3x5_rotate_pressed.png: 71x61 dp (107x92 px), drawable-xhdpi/btn_3x5_rotate_pressed.png: 71x61 dp (142x122 px), drawable-mdpi/btn_3x5_rotate_pressed.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/camera.png: Warning: The image camera.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/camera.png: 41x29 dp (81x58 px), drawable-hdpi/camera.png: 41x29 dp (61x44 px), drawable-mdpi/camera.png: 31x22 dp (31x22 px) [IconDipSize]
+res/drawable-xhdpi/centerbtn234.png: Warning: The image centerbtn234.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/centerbtn234.png: 95x81 dp (142x122 px), drawable-mdpi/centerbtn234.png: 71x61 dp (71x61 px), drawable-xhdpi/centerbtn234.png: 71x61 dp (142x122 px) [IconDipSize]
+res/drawable-mdpi/centerbtn234_pressed.png: Warning: The image centerbtn234_pressed.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/centerbtn234_pressed.png: 71x61 dp (107x92 px), drawable-xhdpi/centerbtn234_pressed.png: 71x61 dp (142x122 px), drawable-mdpi/centerbtn234_pressed.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/crop_2x3_normal.png: Warning: The image crop_2x3_normal.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/crop_2x3_normal.png: 71x61 dp (107x92 px), drawable-xhdpi/crop_2x3_normal.png: 71x61 dp (142x122 px), drawable-mdpi/crop_2x3_normal.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/custom.png: Warning: The image custom.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/custom.png: 71x61 dp (142x122 px), drawable-hdpi/custom.png: 71x61 dp (107x92 px), drawable-mdpi/custom.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/custom_pressed.png: Warning: The image custom_pressed.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/custom_pressed.png: 71x61 dp (142x122 px), drawable-hdpi/custom_pressed.png: 71x61 dp (107x92 px), drawable-mdpi/custom_pressed.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-xhdpi/drawer_bg.png: Warning: The image drawer_bg.png varies significantly in its density-independent (dip) size across the various density versions: drawable-mdpi/drawer_bg.png: 7x7 dp (7x7 px), drawable-xhdpi/drawer_bg.png: 4x4 dp (7x7 px) [IconDipSize]
+res/drawable-xhdpi/filters_background.png: Warning: The image filters_background.png varies significantly in its density-independent (dip) size across the various density versions: drawable-mdpi/filters_background.png: 14x14 dp (14x14 px), drawable-hdpi/filters_background.png: 14x14 dp (21x21 px), drawable-xhdpi/filters_background.png: 11x11 dp (21x21 px) [IconDipSize]
+res/drawable-mdpi/free_icn.png: Warning: The image free_icn.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/free_icn.png: 20x20 dp (30x30 px), drawable-xhdpi/free_icn.png: 20x20 dp (40x40 px), drawable-mdpi/free_icn.png: 15x15 dp (15x15 px) [IconDipSize]
+res/drawable-mdpi/icon_bottomleft.png: Warning: The image icon_bottomleft.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/icon_bottomleft.png: 31x31 dp (46x46 px), drawable-xhdpi/icon_bottomleft.png: 26x26 dp (52x52 px), drawable-mdpi/icon_bottomleft.png: 25x25 dp (25x25 px) [IconDipSize]
+res/drawable-mdpi/icon_bottomright.png: Warning: The image icon_bottomright.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/icon_bottomright.png: 31x31 dp (46x46 px), drawable-xhdpi/icon_bottomright.png: 26x26 dp (52x52 px), drawable-mdpi/icon_bottomright.png: 25x25 dp (25x25 px) [IconDipSize]
+res/drawable-mdpi/icon_topleft.png: Warning: The image icon_topleft.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/icon_topleft.png: 31x31 dp (46x46 px), drawable-xhdpi/icon_topleft.png: 26x26 dp (52x52 px), drawable-mdpi/icon_topleft.png: 25x25 dp (25x25 px) [IconDipSize]
+res/drawable-mdpi/icon_topright.png: Warning: The image icon_topright.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/icon_topright.png: 31x31 dp (46x46 px), drawable-xhdpi/icon_topright.png: 26x26 dp (52x52 px), drawable-mdpi/icon_topright.png: 25x25 dp (25x25 px) [IconDipSize]
+res/drawable-xhdpi/leftbtn1.png: Warning: The image leftbtn1.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/leftbtn1.png: 95x81 dp (142x122 px), drawable-mdpi/leftbtn1.png: 71x61 dp (71x61 px), drawable-xhdpi/leftbtn1.png: 71x61 dp (142x122 px) [IconDipSize]
+res/drawable-mdpi/leftbtn1_pressed.png: Warning: The image leftbtn1_pressed.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/leftbtn1_pressed.png: 71x61 dp (107x92 px), drawable-xhdpi/leftbtn1_pressed.png: 71x61 dp (142x122 px), drawable-mdpi/leftbtn1_pressed.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/lowerleftupperright.png: Warning: The image lowerleftupperright.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/lowerleftupperright.png: 23x23 dp (35x35 px), drawable-xhdpi/lowerleftupperright.png: 23x23 dp (46x46 px), drawable-mdpi/lowerleftupperright.png: 18x18 dp (18x18 px) [IconDipSize]
+res/drawable-mdpi/original.png: Warning: The image original.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/original.png: 71x61 dp (107x92 px), drawable-xhdpi/original.png: 71x61 dp (142x122 px), drawable-mdpi/original.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/original_pressed.png: Warning: The image original_pressed.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/original_pressed.png: 71x61 dp (142x122 px), drawable-hdpi/original_pressed.png: 71x61 dp (107x92 px), drawable-mdpi/original_pressed.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/paid_icn.png: Warning: The image paid_icn.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/paid_icn.png: 20x20 dp (30x30 px), drawable-xhdpi/paid_icn.png: 20x20 dp (40x40 px), drawable-mdpi/paid_icn.png: 15x15 dp (15x15 px) [IconDipSize]
+res/drawable-mdpi/paidscreen.png: Warning: The image paidscreen.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/paidscreen.png: 360x95 dp (720x190 px), drawable-hdpi/paidscreen.png: 360x95 dp (540x143 px), drawable-mdpi/paidscreen.png: 270x72 dp (270x72 px) [IconDipSize]
+res/drawable-mdpi/rightbtn5.png: Warning: The image rightbtn5.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/rightbtn5.png: 95x81 dp (142x122 px), drawable-xhdpi/rightbtn5.png: 71x61 dp (142x122 px), drawable-mdpi/rightbtn5.png: 71x61 dp (71x61 px) [IconDipSize]
+res/drawable-mdpi/rightbtn5_pressed.png: Warning: The image rightbtn5_pressed.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/rightbtn5_pressed.png: 71x61 dp (107x92 px), drawable-xhdpi/rightbtn5_pressed.png: 71x61 dp (142x122 px), drawable-mdpi/rightbtn5_pressed.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-xhdpi/rotate_left.png: Warning: The image rotate_left.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/rotate_left.png: 32x32 dp (48x48 px), drawable-mdpi/rotate_left.png: 32x32 dp (32x32 px), drawable-xhdpi/rotate_left.png: 24x24 dp (48x48 px) [IconDipSize]
+res/drawable-xhdpi/rotate_right.png: Warning: The image rotate_right.png varies significantly in its density-independent (dip) size across the various density versions: drawable-mdpi/rotate_right.png: 32x32 dp (32x32 px), drawable-hdpi/rotate_right.png: 32x32 dp (48x48 px), drawable-xhdpi/rotate_right.png: 24x24 dp (48x48 px) [IconDipSize]
+res/drawable-mdpi/square.png: Warning: The image square.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/square.png: 71x61 dp (142x122 px), drawable-hdpi/square.png: 71x61 dp (107x92 px), drawable-mdpi/square.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/square_pressed.png: Warning: The image square_pressed.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/square_pressed.png: 71x61 dp (107x92 px), drawable-xhdpi/square_pressed.png: 71x61 dp (142x122 px), drawable-mdpi/square_pressed.png: 54x46 dp (54x46 px) [IconDipSize]
+res/drawable-mdpi/upperrightlowerleft.png: Warning: The image upperrightlowerleft.png varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/upperrightlowerleft.png: 23x23 dp (35x35 px), drawable-xhdpi/upperrightlowerleft.png: 23x23 dp (46x46 px), drawable-mdpi/upperrightlowerleft.png: 18x18 dp (18x18 px) [IconDipSize]
+res/drawable-xhdpi/filters_background.png: Warning: The filters_background.png icon has identical contents in the following configuration folders: drawable-hdpi, drawable-xhdpi [IconDuplicatesConfig]
+res/drawable-xhdpi/rotate_left.png: Warning: The rotate_left.png icon has identical contents in the following configuration folders: drawable-hdpi, drawable-xhdpi [IconDuplicatesConfig]
+res/drawable-xhdpi/rotate_right.png: Warning: The rotate_right.png icon has identical contents in the following configuration folders: drawable-hdpi, drawable-xhdpi [IconDuplicatesConfig]
+res/drawable/actionbar_bg.jpg: Warning: Found bitmap drawable res/drawable/actionbar_bg.jpg in densityless folder [IconLocation]
+res/drawable/active.9.png: Warning: Found bitmap drawable res/drawable/active.9.png in densityless folder [IconLocation]
+res/drawable/bg_normal.png: Warning: Found bitmap drawable res/drawable/bg_normal.png in densityless folder [IconLocation]
+res/drawable/borders.png: Warning: Found bitmap drawable res/drawable/borders.png in densityless folder [IconLocation]
+res/drawable/btn_normal.9.png: Warning: Found bitmap drawable res/drawable/btn_normal.9.png in densityless folder [IconLocation]
+res/drawable/btn_pressed.9.png: Warning: Found bitmap drawable res/drawable/btn_pressed.9.png in densityless folder [IconLocation]
+res/drawable/btn_text_bubble.png: Warning: Found bitmap drawable res/drawable/btn_text_bubble.png in densityless folder [IconLocation]
+res/drawable/btn_text_cute.png: Warning: Found bitmap drawable res/drawable/btn_text_cute.png in densityless folder [IconLocation]
+res/drawable/btn_text_hand.png: Warning: Found bitmap drawable res/drawable/btn_text_hand.png in densityless folder [IconLocation]
+res/drawable/btn_text_industrial.png: Warning: Found bitmap drawable res/drawable/btn_text_industrial.png in densityless folder [IconLocation]
+res/drawable/btn_text_light.png: Warning: Found bitmap drawable res/drawable/btn_text_light.png in densityless folder [IconLocation]
+res/drawable/btn_text_matrix.png: Warning: Found bitmap drawable res/drawable/btn_text_matrix.png in densityless folder [IconLocation]
+res/drawable/btn_text_meme.png: Warning: Found bitmap drawable res/drawable/btn_text_meme.png in densityless folder [IconLocation]
+res/drawable/dollaramount_btn.png: Warning: Found bitmap drawable res/drawable/dollaramount_btn.png in densityless folder [IconLocation]
+res/drawable/dollaramount_btn9.png: Warning: Found bitmap drawable res/drawable/dollaramount_btn9.png in densityless folder [IconLocation]
+res/drawable/effect_selected.9.png: Warning: Found bitmap drawable res/drawable/effect_selected.9.png in densityless folder [IconLocation]
+res/drawable/filters.png: Warning: Found bitmap drawable res/drawable/filters.png in densityless folder [IconLocation]
+res/drawable/hit.9.png: Warning: Found bitmap drawable res/drawable/hit.9.png in densityless folder [IconLocation]
+res/drawable/icon_background.png: Warning: Found bitmap drawable res/drawable/icon_background.png in densityless folder [IconLocation]
+res/drawable/restore_bg.9.png: Warning: Found bitmap drawable res/drawable/restore_bg.9.png in densityless folder [IconLocation]
+res/drawable/restore_topborder.png: Warning: Found bitmap drawable res/drawable/restore_topborder.png in densityless folder [IconLocation]
+res/drawable/shadow_btm_tabbar.png: Warning: Found bitmap drawable res/drawable/shadow_btm_tabbar.png in densityless folder [IconLocation]
+res/drawable/title_icon.png: Warning: Found bitmap drawable res/drawable/title_icon.png in densityless folder [IconLocation]
+res/drawable-hdpi: Warning: Missing the following drawables in drawable-hdpi: crop_3x5_normal.png, cropbtn_3x2_normal.9.png, cropbtn_3x2_normal_rotate.9.png, cropbtn_3x2_normal_toggle.9.png, cropbtn_3x2_pressed_rotate.9.png... (27 more) [IconDensities]
+res/drawable-mdpi: Warning: Missing the following drawables in drawable-mdpi: crop_3x5_normal.png, cropbtn_3x2_normal.9.png, cropbtn_3x2_normal_rotate.9.png, cropbtn_3x2_normal_toggle.9.png, cropbtn_3x2_pressed_rotate.9.png... (29 more) [IconDensities]
+res/drawable-xhdpi: Warning: Missing the following drawables in drawable-xhdpi: progressbar.png, progressbar_bg.png, pulltab.png [IconDensities]
+res/drawable-xhdpi/icon_3x5_pressed.png: Warning: The following unrelated icon files have identical contents: icon_2x3_rotate.png, icon_3x5_pressed.png [IconDuplicates]
+res/menu/cropmenu.xml:4: Warning: Prefer "ifRoom" instead of "always" [AlwaysShowAction]
+     <item android:id="@+id/rotate_left" android:icon="@drawable/rotate_left" android:showAsAction="always"/>
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res/layout/filter_slider.xml:16: Warning: [Accessibility] Missing contentDescription attribute on image [ContentDescription]
+ <ImageView android:layout_width="wrap_content"
+ ^
+res/layout/photodetail.xml:123: Warning: [Accessibility] Missing contentDescription attribute on image [ContentDescription]
+      <ImageView
+      ^
+res/layout/photodetail.xml:146: Warning: [Accessibility] Missing contentDescription attribute on image [ContentDescription]
+      <ImageView
+      ^
+res/layout/photodetail.xml:168: Warning: [Accessibility] Missing contentDescription attribute on image [ContentDescription]
+      <ImageView
+      ^
+res/layout/photodetail.xml:190: Warning: [Accessibility] Missing contentDescription attribute on image [ContentDescription]
+      <ImageView
+      ^
+res/layout/photodetail.xml:255: Warning: [Accessibility] Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+    ^
+res/layout/photodetail.xml:269: Warning: [Accessibility] Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+    ^
+res/layout/photodetail.xml:284: Warning: [Accessibility] Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+    ^
+res/layout/photodetail.xml:300: Warning: [Accessibility] Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+    ^
+res/layout/sticker_buy.xml:15: Warning: [Accessibility] Missing contentDescription attribute on image [ContentDescription]
+  <ImageView
+  ^
+res/menu/cropmenu.xml:6: Warning: [I18N] Hardcoded string "Next", should use @string resource [HardcodedText]
+        <item android:id="@+id/next" android:title="Next" android:showAsAction="always"/>
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0 errors, 140 warnings

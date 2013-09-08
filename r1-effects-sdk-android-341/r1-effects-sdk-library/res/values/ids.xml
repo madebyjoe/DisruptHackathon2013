@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<item type="id" name="loadingProgress" />
+	<item type="id" name="pack_key" />
+	<item type="id" name="asset_key" />
+	<item type="id" name="item_key" />
+	<item type="id" name="image_view_text" />
+	<item type="id" name="image_border" />
+	<item type="id" name="image_container" />
+</resources>

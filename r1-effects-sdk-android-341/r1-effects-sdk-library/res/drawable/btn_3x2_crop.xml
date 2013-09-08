@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<item android:state_pressed="true" android:state_checked="true"
+		  android:drawable="@drawable/cropbtn_3x2_pressed_rotate" /> <!-- pressed & checked -->
+	<item android:state_pressed="true" android:state_checked="false"
+		  android:drawable="@drawable/cropbtn_3x2_pressed_toggle" /> <!-- pressed & checked -->
+	<item android:state_selected="true" android:state_checked="true"
+		  android:drawable="@drawable/cropbtn_3x2_pressed_rotate" /> <!-- selected & checked -->
+	<item android:state_selected="true" android:state_checked="false"
+		  android:drawable="@drawable/cropbtn_3x2_pressed_toggle" /> <!-- selected & !checked -->
+	<item android:state_checked="true"
+		  android:drawable="@drawable/cropbtn_3x2_normal_rotate" /> <!-- checked -->
+	<item android:drawable="@drawable/cropbtn_3x2_normal_toggle" /> <!-- default -->
+</selector>

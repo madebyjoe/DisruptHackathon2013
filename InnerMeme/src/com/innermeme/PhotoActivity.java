@@ -4,8 +4,12 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.Paint;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
+import android.hardware.Camera.ShutterCallback;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -42,8 +46,12 @@ public class PhotoActivity extends FragmentActivity {
 		Screen.setHeight(getResources().getDisplayMetrics().heightPixels);
         Screen.setWidth(getResources().getDisplayMetrics().widthPixels);
 		
-//        R1PhotoEffectsSDK.getManager().enable(getApplicationContext(), "3d2848e0-77a5-0130-64de-22000ac40812", "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkPXxk7BIWriqNE1jRjay4jfioYsVolOJvKoHuyW7svaYCASwCBV4KxQCsvz50UTVLdmddnTlixI5VjXt+3Va6YV2GQf1rT3geuxLen5HpVwtq7bROd9Z9iAvDrqseNWb+iCGnIUrt6k2/9FOESSagTc4/zKcxrprR/zayucJ/iDDPRRrErbZIB8PWi+XT+k04PAiEp0VIr5t37EyTk55mqst+kbxBRLRLMmhWrrVxH+ff7RPFGVaR1z3X5CnTj5mtMb94RS3AzRFAs7gXHqfrzogYrHl8m6sgT+bmSD6V8kYov49cAzRrpE0Enlcr7MGsi7l3NMc4xkjNakEiHsUjwIDAQAB", R1PhotoEffectsSDK.CROP_MODE_ALL);
+        R1PhotoEffectsSDK.getManager().enable(getApplicationContext(), "aee035b0-fa71-0130-5fff-22000afc8c3d",
+        		"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkCaoRrklKq+Rorv5Z4Rg6DkEU4/R3q6IlrByQyfPJbrt1m3quSVcdqpEI9ftXIadPtmtvUXE9zH7d4JCWTh8TYlOt0uYcSkyM6uH09hLVqU6sQbLs88sVh2zDkSXlwBBLAdBDhmqcdN4K7Tcgru6tHc7LfNBp0nk2CZy8S6+8dyAx/Xgs8umE+U7/hNTRkEwmzO/cmU+EAsxdgSxBqQqpCX7gbgdXY54pkSicmDwEUl+ICOtWiPHXHbhwSDJdMLuoSQfnBUPbNzRvYjmGc5yM9dYlOQwpdH4IL5Oiwp7hD0ImeIRX0n+WnI2CFSONWOZoIMpafEXR4k7IorWcS4d9wIDAQAB",
+        		R1PhotoEffectsSDK.CROP_MODE_ALL);
 
+        Log.d("TAG", "Hardware good? "+checkCameraHardware(getApplicationContext()));
+        
 		// Create an instance of Camera
         mCamera = getCameraInstance();
 
@@ -58,7 +66,7 @@ public class PhotoActivity extends FragmentActivity {
                 @Override
                 public void onClick(View v) {
                     // get an image from the camera
-                    mCamera.takePicture(null, null, mPicture);
+                	mCamera.takePicture(null, null, mPicture);
                 }
             }
         );
@@ -90,53 +98,55 @@ public class PhotoActivity extends FragmentActivity {
 	    }
 	    catch (Exception e){
 	        // Camera is not available (in use or does not exist)
+	    	e.printStackTrace();
 	    }
+	    Log.d("TAG", "Camera: "+c);
+	    
 	    return c; // returns null if camera is unavailable
 	}
+	
+	private ShutterCallback mShutter = new ShutterCallback(){
+
+		@Override
+		public void onShutter() {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	};
 	
 	private PictureCallback mPicture = new PictureCallback() {
 
 	    @Override
 	    public void onPictureTaken(byte[] data, Camera camera) {
+	    		    	
+//	    	mCamera = camera;
 	    	
-//	    	Bitmap bitmap = BitmapFactory.decodeByteArray(data , 0, data.length);
-//	    	
-//	    	Log.d("Bitmap", "Bitmap: "+bitmap);
+	    	Bitmap bitmap = BitmapFactory.decodeByteArray(data , 0, data.length);
 	    	
-//	    	R1PhotoEffectsSDK r1sdk = R1PhotoEffectsSDK.getManager();
-//	    	  r1sdk.launchPhotoEffects(PhotoActivity.getContext(), bitmap, true,
-//	    	          new R1PhotoEffectsSDK.PhotoEffectsListener() {            
-//	    	                  @Override
-//	    	                  public void onEffectsComplete(Bitmap output) {
-//	    	                          if( null == output ){
-//	    	                                  return;
-//	    	                          }
-//	    	                          // do something with output   
-//	    	                  }
-//	    	                  
-//	    	                  @Override
-//	    	                  public void onEffectsCanceled() {
-//	    	                          // user canceled                  
-//	    	                  }
-//	    	          } 
-//	    	  );
+	    	Matrix matrix = new Matrix();
+	    	matrix.postRotate(90);
+	    	Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap , 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
 
-//	        File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE);
-//	        if (pictureFile == null){
-//	            Log.d(TAG, "Error creating media file, check storage permissions: " +
-//	                e.getMessage());
-//	            return;
-//	        }
-//
-//	        try {
-//	            FileOutputStream fos = new FileOutputStream(pictureFile);
-//	            fos.write(data);
-//	            fos.close();
-//	        } catch (FileNotFoundException e) {
-//	            Log.d(TAG, "File not found: " + e.getMessage());
-//	        } catch (IOException e) {
-//	            Log.d(TAG, "Error accessing file: " + e.getMessage());
-//	        }
+	    		    	
+	    	R1PhotoEffectsSDK r1sdk = R1PhotoEffectsSDK.getManager();
+	    	  r1sdk.launchPhotoEffects(getApplicationContext(), rotatedBitmap, true,
+	    	          new R1PhotoEffectsSDK.PhotoEffectsListener() {            
+	    	                  @Override
+	    	                  public void onEffectsComplete(Bitmap output) {
+	    	                          if( null == output ){
+	    	                                  return;
+	    	                          }
+	    	                          // do something with output   
+	    	                  }
+	    	                  
+	    	                  @Override
+	    	                  public void onEffectsCanceled() {
+	    	                          // user canceled  
+//	    	                	  mCamera.startPreview();
+	    	                  }
+	    	          } 
+	    	  );
 	    }
 	};
 

@@ -1,15 +1,23 @@
 package com.radiumone.r1sdkdemo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.hardware.Camera;
+import android.hardware.Camera.PictureCallback;
+import android.hardware.Camera.ShutterCallback;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.radiumone.effects_sdk.R1PhotoEffectsSDK;
@@ -25,10 +33,29 @@ public class MainActivity extends Activity {
 	
 	private R1PhotoEffectsSDK r1sdk;
 
+    private final String TAG = MainActivity.class.getSimpleName();
+	
+	CameraPreview mPreview;
+	Camera mCamera;
+	boolean mWaitingForGlobalLayout = true;
+	
+	private static MainActivity instance;
+	
+	public static Context getContext(){
+		return instance;
+	}
+	
+	public static MainActivity getInstance(){
+		return instance;
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		Screen.setHeight(getResources().getDisplayMetrics().heightPixels);
+        Screen.setWidth(getResources().getDisplayMetrics().widthPixels);
 
 		// R1 SDK initialization
 		r1sdk = R1PhotoEffectsSDK.getManager();
@@ -39,6 +66,14 @@ public class MainActivity extends Activity {
 		// Assign image view
 		mFinalImageView = (ImageView) findViewById(R.id.dm_final_image);  
 
+		// Create an instance of Camera
+        mCamera = getCameraInstance();
+
+     // Create our Preview view and set it as the content of our activity.
+        mPreview = new CameraPreview(this, mCamera);
+        FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
+        preview.addView(mPreview);
+		
 		// Assign button and add an event listener
 		mLaunchSDKButton = (Button) findViewById(R.id.dm_launch_sdk_button);
 		mLaunchSDKButton.setOnClickListener(new OnClickListener() {
@@ -46,7 +81,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// Open device gallery
-				startSelectPicture();   
+//				startSelectPicture(); 
+				mCamera.takePicture(null, null, mPicture);
 			}
 		});    
 	}
@@ -123,4 +159,72 @@ public class MainActivity extends Activity {
 		cursor.close();
 		return filePath;
 	}
+	
+	/** Check if this device has a camera */
+	private boolean checkCameraHardware(Context context) {
+	    if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
+	        // this device has a camera
+	        return true;
+	    } else {
+	        // no camera on this device
+	        return false;
+	    }
+	}
+	
+	/** A safe way to get an instance of the Camera object. */
+	public static Camera getCameraInstance(){
+	    Camera c = null;
+	    try {
+	        c = Camera.open(); // attempt to get a Camera instance
+	    }
+	    catch (Exception e){
+	        // Camera is not available (in use or does not exist)
+	    }
+	    return c; // returns null if camera is unavailable
+	}
+	
+	private ShutterCallback mShutter = new ShutterCallback(){
+
+		@Override
+		public void onShutter() {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	};
+	
+	private PictureCallback mPicture = new PictureCallback() {
+
+	    @Override
+	    public void onPictureTaken(byte[] data, Camera camera) {
+	    		    	
+	    	camera.startPreview();
+	    	
+	    	Log.d(TAG, "data: "+data);
+	    	
+	    	Bitmap bitmap = BitmapFactory.decodeByteArray(data , 0, data.length);
+	    	
+	    	Log.d(TAG, "bitmap: "+bitmap);
+	    	
+	    	Log.d(TAG, "sdk: "+r1sdk);
+	    		    	
+	    	R1PhotoEffectsSDK r1sdk = R1PhotoEffectsSDK.getManager();
+	    	  r1sdk.launchPhotoEffects(getApplicationContext(), bitmap, true,
+	    	          new R1PhotoEffectsSDK.PhotoEffectsListener() {            
+	    	                  @Override
+	    	                  public void onEffectsComplete(Bitmap output) {
+	    	                          if( null == output ){
+	    	                                  return;
+	    	                          }
+	    	                          // do something with output   
+	    	                  }
+	    	                  
+	    	                  @Override
+	    	                  public void onEffectsCanceled() {
+	    	                          // user canceled                  
+	    	                  }
+	    	          } 
+	    	  );
+	    }
+	};
 }

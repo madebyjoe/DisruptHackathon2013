@@ -11,6 +11,12 @@
         android:paddingTop="10dp"
         android:text="@string/directions" />
 
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" />
+    
     <ImageView
         android:id="@+id/dm_final_image"
         android:layout_width="match_parent"

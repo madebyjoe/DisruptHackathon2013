@@ -1,4 +1,4 @@
-package com.chevroletpass.api;
+package com.chevroletpass.api.json;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -24,7 +24,7 @@ public class User {
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
-  String getLastName() {
+  public String getLastName() {
     return lastName;
   }
   public void setLastName(String lastName) {

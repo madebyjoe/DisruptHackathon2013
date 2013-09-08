@@ -1,4 +1,4 @@
-package com.chevroletpass.api;
+package com.chevroletpass.api.json;
 
 import java.util.ArrayList;
 

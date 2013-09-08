@@ -1,5 +1,8 @@
 package com.chevroletpass.api;
 
+import com.chevroletpass.api.json.User;
+import com.chevroletpass.api.json.UserContainer;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;

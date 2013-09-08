@@ -2,9 +2,19 @@ package com.chevroletpass;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.chevroletpass.api.Config;
+import com.chevroletpass.api.Fixtures.MockUserService;
+import com.chevroletpass.api.IUserService;
+import com.chevroletpass.api.UserService;
 
 public class DashActivity extends FragmentActivity {
 
@@ -18,12 +28,28 @@ public class DashActivity extends FragmentActivity {
     return instance;
   }
 
+  private Button mTestButton;
+  private IUserService userService;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.dash_main);
-  }
 
+    if(Config.isTestMode){
+      userService = new MockUserService();
+    }else{
+      userService = new UserService();
+    }
+
+    this.mTestButton = (Button) this.findViewById(R.id.test_btn);
+    this.mTestButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        
+      }
+    });
+  }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {

@@ -1,4 +1,7 @@
-package com.chevroletpass.api;
+package com.chevroletpass.api.Fixtures;
+
+import com.chevroletpass.api.IUserService;
+import com.chevroletpass.api.json.User;
 
 import java.util.ArrayList;
 

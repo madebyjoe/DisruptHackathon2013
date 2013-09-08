@@ -1,5 +1,7 @@
 package com.chevroletpass.api;
 
+import com.chevroletpass.api.json.User;
+
 import java.util.ArrayList;
 
 /**

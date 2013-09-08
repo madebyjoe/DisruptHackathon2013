@@ -7,4 +7,7 @@
     <string name="remote_menu">Car Remote</string>
     <string name="hello_world">Hello world!</string>
 
+    <string name="api_key">691c64ec656c3e991144fcf06</string>
+    <string name="secret_key">2de62e4141954c4d</string>
+
 </resources>

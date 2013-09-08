@@ -7,4 +7,8 @@
           android:title="@string/insurance_claim"
           android:orderInCategory="200"
           android:showAsAction="never" />
+    <item android:id="@+id/remote"
+          android:title="@string/remote_menu"
+          android:orderInCategory="200"
+          android:showAsAction="never" />
 </menu>

@@ -48,11 +48,14 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 	      Log.d(TAG, "Camera Started");
 	    } catch (IOException e) {
 	      Log.e(TAG, "Error setting camera preview: " + e.getMessage());
+	      mCamera.release();
+          mCamera = null;
 	    }
 	  }
 
 	  public void surfaceDestroyed(SurfaceHolder holder) {
 	    // empty. Take care of releasing the Camera preview in your activity.
+		  
 	  }
 
 	  public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {

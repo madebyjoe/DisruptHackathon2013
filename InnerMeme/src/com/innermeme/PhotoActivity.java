@@ -4,9 +4,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
 import android.graphics.Matrix;
-import android.graphics.Paint;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.ShutterCallback;
@@ -15,6 +13,8 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewTreeObserver;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
@@ -43,6 +43,30 @@ public class PhotoActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.photo_main);
 		
+		
+		final View rootView = findViewById(R.id.root_view);
+//	      final ViewTreeObserver vto = rootView.getViewTreeObserver();
+//	      vto.addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
+//	        @Override
+//	        public void onGlobalLayout() {
+//	          if (mWaitingForGlobalLayout) {
+//	            mWaitingForGlobalLayout = false;
+//	            Screen.setHeight(rootView.getHeight());
+//	            Screen.setWidth(rootView.getWidth());
+//
+//	            mPreview = new CameraPreview(getApplicationContext(), mCamera);
+//	            FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
+//	            preview.addView(mPreview);
+//	          }
+//	        }
+//	      });
+	      
+//	      Screen.setHeight(rootView.getHeight());
+//          Screen.setWidth(rootView.getWidth());
+
+       // Create an instance of Camera
+          mCamera = getCameraInstance();
+		
 		Screen.setHeight(getResources().getDisplayMetrics().heightPixels);
         Screen.setWidth(getResources().getDisplayMetrics().widthPixels);
 		
@@ -52,8 +76,7 @@ public class PhotoActivity extends FragmentActivity {
 
         Log.d("TAG", "Hardware good? "+checkCameraHardware(getApplicationContext()));
         
-		// Create an instance of Camera
-        mCamera = getCameraInstance();
+		
 
      // Create our Preview view and set it as the content of our activity.
         mPreview = new CameraPreview(this, mCamera);
@@ -79,6 +102,18 @@ public class PhotoActivity extends FragmentActivity {
 		return true;
 	}
 	
+	@Override
+	public void onResume(){
+		super.onResume();
+		mCamera = getCameraInstance();
+	}
+	
+	@Override
+	  public void onPause(){
+	    super.onPause();
+	    releaseCamera();
+	  }
+	
 	/** Check if this device has a camera */
 	private boolean checkCameraHardware(Context context) {
 	    if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
@@ -103,6 +138,15 @@ public class PhotoActivity extends FragmentActivity {
 	    Log.d("TAG", "Camera: "+c);
 	    
 	    return c; // returns null if camera is unavailable
+	}
+	
+	private void releaseCamera(){
+		if (mCamera != null) {
+			  mCamera.stopPreview();
+			  mCamera.setPreviewCallback(null);
+			  mCamera.release();
+			  mCamera = null;
+		    }
 	}
 	
 	private ShutterCallback mShutter = new ShutterCallback(){

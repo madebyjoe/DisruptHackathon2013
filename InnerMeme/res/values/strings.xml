@@ -3,6 +3,7 @@
 
     <string name="app_name">Inner Meme</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="new_meme_btn_label">Make New Meme Now</string>
+    <string name="old_meme_btn_label">Make Existing Meme Now</string>
 
 </resources>
